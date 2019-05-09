@@ -129,25 +129,26 @@ nav h1 a {
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  height: 16em;
   background-color: #3397db;
   align-items: center;
   padding: 3%;
 }
 .filter-options h2 {
   color: white;
-  font-size: 4em;
+  font-size: 2em;
   font-weight: normal;
   line-height: 1;
+  text-transform: uppercase;
 }
 .filter-options select {
   background-color: white;
   font-family: Arial, sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   width: 94%;
   letter-spacing: 0;
   margin: 0.5vh 0;
-  padding: 0 1em;
+  padding: 2%;
+  color: #666;
 }
 
 /* ====================== Restaurant Listing ====================== */
