@@ -236,7 +236,9 @@ nav h1 a {
 .inside #footer {
   bottom: 0;
   position: absolute;
-  width: 50%;
+  width: 90%;
+  height: 70px;
+  font-size: 2em;
 }
 #restaurant-name {
   color: #f18200;
@@ -249,7 +251,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-  width: 90%;
+  width: 100%;
 }
 #restaurant-address {
   font-size: 12pt;
@@ -265,17 +267,22 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-  width: 90%;
+  width: 100%;
+}
+#restaurant-hours td {
+  font-size: 2.5em;
 }
 #restaurant-container,
 #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 50%;
+  padding: 5%;
+
+  /* width: 50%; */
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  /* padding: 30px 40px 80px; */
+  padding-bottom: 120px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -293,15 +300,43 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 0 0 5%;
   overflow: hidden;
-  padding: 0 20px 20px;
+  padding: 5%;
   position: relative;
-  width: 85%;
 }
 #reviews-list li p {
   margin: 0 0 10px;
+  color: #333;
 }
+#reviews-list li p:first-of-type {
+  color: #222;
+  font-weight: 900;
+}
+#reviews-list li p:last-of-type {
+  color: #888;
+}
+
 #restaurant-hours td {
   color: #666;
+}
+
+/* iPad styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  #map {
+    height: 40vh;
+  }
+
+  #restaurants-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #restaurants-list li a {
+    height: 50px;
+    font-size: 30px;
+  }
+
+}
+
 }
