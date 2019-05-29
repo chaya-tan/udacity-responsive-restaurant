@@ -382,6 +382,12 @@ nav h1 a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  #restaurants-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   #restaurants-list li a {
     font-size: 1.5em;
   }
