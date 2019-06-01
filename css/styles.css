@@ -351,6 +351,10 @@ nav h1 a {
 
 /* Desktop style */
 @media only screen and (min-device-width: 1025px) {
+  nav h1 a {
+    font-size: 1.5em;
+  }
+
   #breadcrumb {
     padding: 1%;
   }
@@ -370,6 +374,25 @@ nav h1 a {
 
   .filter-options {
     height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .filter-options h2 {
+    font-size: 1.5em;
+  }
+
+  .filter-options select {
+    font-size: 1.5em;
+  }
+
+  #cuisines-select {
+    margin-bottom: 25vh;
+  }
+
+  #restaurant-name {
+    display: none;
   }
 
   #restaurant-list-section {
@@ -393,14 +416,15 @@ nav h1 a {
   }
 
   #restaurant-container {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-
-  #reviews-container {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    padding-top: 0;
+  }
+
+  #reviews-container {
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 
   #restaurant-address {
