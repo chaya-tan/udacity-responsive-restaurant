@@ -3,7 +3,21 @@ var newMap;
 var markers = [];
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/service-worker.js');
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('js/sw.js').then(
+      function(registration) {
+        // Registration was successful
+        console.log(
+          'ServiceWorker registration successful with scope: ',
+          registration.scope
+        );
+      },
+      function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      }
+    );
+  });
 }
 
 /**
@@ -201,13 +215,16 @@ createRestaurantHTML = restaurant => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
+  console.log('restaurants', restaurants);
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
+    console.log('marker', marker);
     marker.on('click', onClick);
     function onClick() {
       window.location.href = marker.options.url;
     }
+    console.log('self.markers', self.markers);
     self.markers.push(marker);
   });
 };
